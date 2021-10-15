@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda SM - Tienda de artículos de segunda mano</title>
+  <meta name="description"
+    content="“Si no lo usas, súbelo“. Esta plataforma cada vez mas sigue creciendo gracias a que muchas personas encuentran lo que buscan. Tienda de articulos de segunda mano, compra de articulos, vende los articulos de que ya no usas. " />
+  <meta name="keywords" content="Producto, Productos, Usado, Segunda mano, Comprar, Vender" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/config.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/buscar.css">
+  <script src="js/scripts/general.js"></script>
+  <script src="js/scripts/formulario.js"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+
+  <!-- Cabecera -->
+
+  <div class="cabeza" id="cabeza">
+    <!-- Backdrop -->
+    <div class="fondo" id="fondo"></div>
+
+    <header class="cabecera">
+      <div class="cabecera__envoltura">
+        <section class="cabecera__izquierda">
+          <!-- Logo -->
+
+          <a href="index.html" class="logo">
+            <h1 class="logo__titulo">Tienda SM</h1>
+          </a>
+
+          <!-- Campo de búsqueda -->
+
+          <form class="cabecera__busqueda" id="busqueda">
+            <img class="cabecera__bus-icono" src="iconos/buscar.svg" alt="Buscar" />
+            <input class="cabecera__buscar" type="text" placeholder="Buscar productos en todas las categorías" />
+          </form>
+        </section>
+        <section class="cabecera__derecha">
+
+          <!-- Tab de mensajes -->
+
+          <a href="subir-producto.html" class="btn btn-primario cabecera__tab-btn-subir">
+            <img src="iconos/subir.svg" alt="Subir" class="cabecera__tab-btn-subir-icono">
+            <span class="cabecera__tab-btn-subir-texto">Subir producto</span>
+          </a>
+          <button type="button" class="btn btn-primario-contorno cabecera__tab-btn-registro" id="btn-formulario">
+            Regístrate ó Inicia Sesión
+          </button>
+
+          <!-- Formulario de registro -->
+          <div class="cabecera__contenedor-formulario" id="contenedor-formularios">
+            <div class="x">
+              <span id="ocultar-formulario">&times;</span>
+            </div>
+            <form class="cabecera__formulario formulario-activo" action="#" autocomplete="off" id="ingreso">
+              <p class="cabecera__form-titulo">¡Bienvenido de nuevo!</p>
+              <p class="cabecera__form-subtitulo">Ingresa tus datos</p>
+              <div class='form-grupo'>
+                <input type="email" class="input-text-linea" placeholder="Dirección de email" name="correo"
+                  id="correoIng" />
+                <p class="form-error" id="correoIngError">Ingrese su dirección de correo</p>
+              </div>
+              <div class='form-grupo'>
+                <input type="password" class="input-text-linea 
+                input-aux" placeholder="Contraseña" name="contraseña" id="contraIng" />
+                <p class="form-error" id="contraIngError">Ingrese su contraseña</p>
+              </div>
+              <input type="submit" class="btn btn-primario cabecera__form-submit" value="Iniciar Sesión" />
+              <a href="#" class="cabecera__form-enlace">¿Olvidaste tu contraseña?</a>
+              <a href="#registro" class="cabecera__form-enlace" id="link-registro">¿No tienes una cuenta? Crear
+                cuenta</a>
+            </form>
+            <form class="cabecera__formulario" action="#" id="registro" autocomplete="off">
+              <p class="cabecera__form-titulo">Regístrate en la Tienda SM</p>
+              <p class="cabecera__form-subtitulo">Ingresa tus datos</p>
+              <div class="form-grupo">
+                <input type="text" class="input-text-linea" placeholder="Nombres y apellidos" name="text"
+                  id="datosReg" />
+                <p class="form-error" id="datosRegError">Ingrese sus nombres y apellidos</p>
+              </div>
+              <div class="form-grupo">
+                <input type="email" class="input-text-linea" placeholder="Dirección de correo" name="email"
+                  id="correoReg" />
+                <p class="form-error" id="correoRegError">Ingrese una dirección de correo</p>
+              </div>
+              <div class="form-grupo">
+                <input type="password" class="input-text-linea" placeholder="Contraseña" name="contraseña"
+                  id="contraReg" />
+                <p class="form-error" id="contraRegError">Ingrese una contraseña</p>
+              </div>
+              <label class="checkbox" for="novedades">
+                <input type="checkbox" name="novedades" class="checkbox-elemento" />
+                Quiero recibir mensajes sobre promociones y novedades de la tienda.
+              </label>
+              <div class="form-grupo">
+                <label class="checkbox" for="politicas">
+                  <input type="checkbox" name="politicas" id="politicasReg" class="checkbox-elemento" checked />
+                  He leido y acepto las condiciones de uso de la politica de privacidad de la Tienda SM.
+                </label>
+                <p class="form-error" id="politicasRegError">Para crear una cuenta, debe aceptar las condiciones de uso
+                </p>
+              </div>
+
+              <input type="submit" class="btn btn-primario cabecera__form-submit" value="Crear una cuenta" />
+
+              <a href="#ingreso" class="cabecera__form-enlace" id="link-ingreso">¿Ya tienes una cuenta? Iniciar
+                sesión</a>
+            </form>
+          </div>
+          <!-- Fin formulario de registro -->
+          <a href="subir-producto.html" class="btn btn-primario cabecera__tab-btn-subir">
+            <img src="iconos/subir.svg" alt="Subir" class="cabecera__tab-btn-subir-icono">
+            <span class="cabecera__tab-btn-subir-texto">Subir producto</span>
+          </a>
+        </section>
+      </div>
+    </header>
+
+    <!-- Formulario menor a 992px -->
+
+    <div class="contenedor-formulario" id="contenedor-formularios-res">
+      <div class="x">
+        <span id="ocultar-formulario-res">&times;</span>
+      </div>
+      <form class="cabecera__formulario formulario-activo" action="#" autocomplete="off" id="ingreso-res">
+        <p class="cabecera__form-titulo">¡Bienvenido de nuevo!</p>
+        <p class="cabecera__form-subtitulo">Ingresa tus datos</p>
+        <div class='form-grupo'>
+          <input type="email" class="input-text-linea" placeholder="Dirección de email" name="correo"
+            id="correoIngRes" />
+          <p class="form-error" id="correoIngErrorRes">Ingrese su dirección de correo</p>
+        </div>
+        <div class='form-grupo'>
+          <input type="password" class="input-text-linea 
+          input-aux" placeholder="Contraseña" name="contraseña" id="contraIngRes" />
+          <p class="form-error" id="contraIngErrorRes">Ingrese su contraseña</p>
+        </div>
+        <input type="submit" class="btn btn-primario cabecera__form-submit" value="Iniciar Sesión" />
+        <a href="#" class="cabecera__form-enlace">¿Olvidaste tu contraseña?</a>
+        <a href="#registro" class="cabecera__form-enlace" id="link-registro-res">¿No tienes una cuenta? Crear cuenta</a>
+      </form>
+      <form class="cabecera__formulario" action="#" id="registro-res" autocomplete="off">
+        <p class="cabecera__form-titulo">Regístrate en la Tienda SM</p>
+        <p class="cabecera__form-subtitulo">Ingresa tus datos</p>
+        <div class="form-grupo">
+          <input type="email" class="input-text-linea" placeholder="Nombres y apellidos" name="text" />
+          <p class="form-error">Ingrese sus nombres y apellidos</p>
+        </div>
+        <div class="form-grupo">
+          <input type="email" class="input-text-linea" placeholder="Dirección de correo" name="email" />
+          <p class="form-error">Ingrese una dirección de correo</p>
+        </div>
+        <div class="form-grupo">
+          <input type="password" class="input-text-linea" placeholder="Contraseña" name="contraseña" />
+          <p class="form-error">Ingrese una contraseña</p>
+        </div>
+
+        <label class="checkbox" for="novedades">
+          <input type="checkbox" name="novedades" id="novedades" class="checkbox-elemento" />
+          Quiero recibir mensajes sobre promociones y novedades de la tienda.
+        </label>
+        <label class="checkbox" for="politicas">
+          <input type="checkbox" name="politicas" id="politicas" class="checkbox-elemento" checked />
+          He leido y acepto las condiciones de uso de la politica de privacidad de la Tienda SM.
+        </label>
+
+        <input type="submit" class="btn btn-primario cabecera__form-submit" value="Crear una cuenta" />
+
+        <a href="#ingreso" class="cabecera__form-enlace" id="link-ingreso-res">¿Ya tienes una cuenta? Iniciar sesión</a>
+      </form>
+    </div>
+
+    <!-- Fin formulario menor a 992px -->
+
+    <!-- Navegación -->
+
+    <div class="nav-contenedor">
+      <button type="button" class="btn btn-primario nav__alternador-menu" id="alternador">
+        <img src="iconos/menu.svg" alt="Menú" class="nav__alternador-menu-icono">
+      </button>
+      <div class="nav" id="nav">
+        <!-- Se muestra en dispositivos menores a 992px de ancho -->
+        <section class="nav__acciones">
+          <h4 class="nav__titulo">Acciones</h4>
+          <button class="cabecera__tab nav__accion btn" type="button">
+            <img src="iconos/mensajes.svg" alt="Mensajes" class="cabecera__tab-icono">
+            <span class="cabecera__tab-texto">Mensajes</span>
+          </button>
+          <button type="button" class="btn btn-primario-contorno cabecera__tab-btn-registro nav__accion"
+            id="btn-formulario">
+            Regístrate ó Inicia Sesión
+          </button>
+          <button type="button" class="btn btn-primario cabecera__tab-btn-subir nav__accion">
+            <img src="iconos/subir.svg" alt="Subir" class="cabecera__tab-btn-subir-icono">
+            <span class="cabecera__tab-btn-subir-texto">Subir producto</span>
+          </button>
+        </section>
+
+        <nav class="main-nav">
+          <h4 class="nav__titulo">Categorías</h4>
+          <a href="#" class="main-nav__elemento main-nav__elemento-activo">
+            <img src="iconos/hogar.svg" alt="Hogar" class="main-nav__elemento-icono" />
+            <p class="main-nav__elemento-texto">Hogar</p>
+          </a>
+          <a href="#" class="main-nav__elemento">
+            <img src="iconos/inmobiliaria.svg" alt="Inmobiliaria" class="main-nav__elemento-icono" />
+            <p class="main-nav__elemento-texto">Inmobiliaria</p>
+          </a>
+          <a href="#" class="main-nav__elemento">
+            <img src="iconos/fi_tv.svg" alt="Consolas y videojuegos" class="main-nav__elemento-icono" />
+            <p class="main-nav__elemento-texto">Consolas y videojuegos</p>
+          </a>
+          <a href="#" class="main-nav__elemento">
+            <img src="iconos/cine-libros-musica.svg" alt="Cine, libros y música" class="main-nav__elemento-icono" />
+            <p class="main-nav__elemento-texto">Cine, libros y música</p>
+          </a>
+          <a href="#" class="main-nav__elemento">
+            <img src="iconos/deporte-ocio.svg" alt="Deporte y ocio" class="main-nav__elemento-icono" />
+            <p class="main-nav__elemento-texto">Deporte y ocio</p>
+          </a>
+          <a href="#" class="main-nav__elemento">
+            <img src="iconos/industria.svg" alt="Industria" class="main-nav__elemento-icono" />
+            <p class="main-nav__elemento-texto">Industria</p>
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="filtros">
+      <select class="select">
+        <option value="">CATEGORÍA</option>
+      </select>
+      <select class="select">
+        <option value="">PRECIO</option>
+      </select>
+      <select class="select">
+        <option value="">ESTADO DEL PRODUCTO</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Main -->
+
+  <main class="contenido">
+    <div class="main-envoltura">
+      <div class="contenido-grilla">
+
+        <!-- Artículos -->
+
+        <section class="articulos">
+          <div class="articulos__lista">
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+            <a href="#" class="articulos__elemento">
+              <div class="articulos__elemento-contenedor">
+                <img src="imagenes/ropa para dama.jpg" alt="Ropa para dama" class="articulos__elemento-imagen">
+                <div class="articulos__fondo">
+                  <div class="articulos__opciones">
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/ver.svg" alt="Ver" class="articulos__btn-icono">
+                    </button>
+                    <button type="button" class="btn btn-secondario articulos__btn">
+                      <img src="iconos/carrito.svg" alt="Agregar al carrito" class="articulos__btn-icono">
+                    </button>
+                  </div>
+                </div>
+              </div class="articulos__elemento-contenedor">
+              <p class="articulos__elemento-titulo">
+                Ropa para dama
+              </p>
+              <p class="articulos__elemento-descripcion">
+                Talla 23, Color Verde
+              </p>
+              <span class="articulos__elemento-precio">
+                $29.99
+              </span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <section class="interes">
+      <div class="envoltura">
+        <h4 class="interes__titulo">Productos que tal vez puedan interesarte</h4>
+        <div class="interes__opciones">
+          <button type="button" class="btn btn-acento interes__btn">PlayStation 4</button>
+          <button type="button" class="btn btn-acento interes__btn">Mandos</button>
+          <button type="button" class="btn btn-acento interes__btn">Switch</button>
+          <button type="button" class="btn btn-acento interes__btn">Mandos Nintendo</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor-elementos-footer">
+      <div class="contenedor-img-copyright contenedor-tienda-1">
+        <a href="index.html" class="logo">
+          <p class="logo__titulo">Tienda SM</p>
+        </a>
+        <blockquote class="pie-pagina__copy">
+          &copy; Copyright 2021 Tienda SM
+        </blockquote>
+      </div>
+      <div class="contenedor-tienda-1">
+        <h4>TIENDA SM</h4>
+        <ul>
+          <li>¿Quienes somos?</li>
+          <li>Prensa</li>
+          <li>Equipo</li>
+        </ul>
+      </div>
+
+      <div class="contenedor-tienda-1">
+        <h4>SOPORTE</h4>
+        <ul>
+          <li>Preguntas Frecuentes</li>
+          <li>Reglas de publicacion</li>
+          <li>Consejos de seguridad</li>
+        </ul>
+      </div>
+
+      <div class="contenedor-tienda-1">
+        <h4>LEGAL</h4>
+        <ul>
+          <li>Condiciones de uso</li>
+          <li>Politicas de privacidad</li>
+        </ul>
+      </div>
+
+      <div class="contenedor-tienda-1">
+        <h4>CONTACTO</h4>
+        <ul>
+          <li><a href="index.html">TIENDA SM</a></li>
+          <li><a href="#">tienda-sm@outlook.com</a></li>
+          <li><a href="#">+383 44 201 874</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav class="redes">
+      <a href="#" class="redes__link">
+        <img src="iconos/facebook.svg" alt="Facebook" class="redes__icon">
+      </a>
+      <a href="#" class="redes__link">
+        <img src="iconos/linkedin.jpg" alt="LinkedIn" class="redes__icon">
+      </a>
+      <a href="#" class="redes__link">
+        <img src="iconos/instagram.svg" alt="Instagram" class="redes__icon">
+      </a>
+      <a href="#" class="redes__link">
+        <img src="iconos/twitter.svg" alt="Twitter" class="redes__icon">
+      </a>
+    </nav>
+  </footer>
+</body>
+
+</html>

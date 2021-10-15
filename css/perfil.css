@@ -1,0 +1,273 @@
+body {
+  background-color: #f2f2f2;
+}
+
+/* Cabecera */
+
+.cabeza {
+  background-color: #fff;
+}
+
+.nav {
+  background-color: #e9e9e9;
+}
+
+.menu-lateral {
+  display: none;
+}
+
+.cabecera__tab,
+.cabecera__tab-btn-registro {
+  margin-bottom: 0.5rem;
+}
+
+.cabecera__tab,
+.cabecera__tab-btn-registro,
+.cabecera__tab-btn-subir {
+  width: 100%;
+}
+
+.cabecera__tab-btn-subir {
+  margin-right: 1rem;
+}
+
+/* Componente para input tipo file */
+
+input[type="file"] {
+  display: none;
+}
+
+.boton {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+/* Fin componente para input tipo file */
+
+.perfil {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.perfil__titulo {
+  font-size: 2rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.perfil__info {
+  font-size: 1rem;
+  color: #333;
+}
+
+.perfil__perfil-publico {
+  text-decoration: none;
+  color: #36bb9c;
+}
+
+.perfil__perfil-publico:hover {
+  text-decoration: underline;
+}
+
+.perfil__formulario {
+  margin-top: 2rem;
+}
+
+.perfil__carta-titulo {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.perfil__control {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.perfil__control:last-of-type {
+  margin-bottom: 0;
+}
+
+.perfil__control-label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.perfil__control-imagen {
+  width: 7.5rem;
+  height: 7.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.perfil__control-tomar {
+  margin-left: 1rem;
+}
+
+.perfil__carta:last-of-type {
+  margin-top: 2rem;
+}
+
+.perfil__submit {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+/* API Camara */
+
+.contenedor-camara {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 100;
+  width: 95%;
+  height: 30rem;
+  max-width: 50rem;
+  padding: 0 1rem;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #b3b3b3;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.contenedor-camara.activo {
+  visibility: visible;
+  opacity: 1;
+  top: 50%;
+}
+
+.camara-btn:first-of-type {
+  margin-right: 1.5rem;
+}
+
+.contenedor-imagenes {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.camara,
+.canvas {
+  width: 12rem;
+  height: auto;
+  border-radius: 10px;
+}
+
+.camara {
+  margin-bottom: 2rem;
+}
+
+/* Fin API Camara */
+
+@media screen and (min-width: 576px) {
+  .perfil__control {
+    justify-content: flex-start;
+  }
+
+  .contenedor-imagenes {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .camara,
+  .canvas {
+    width: 47%;
+  }
+
+  .camara {
+    margin-bottom: 0;
+  }
+
+  .contenedor-input-archivo,
+  .perfil__control-imagen {
+    margin-left: 2rem;
+  }
+
+  .nav__acciones {
+    flex-flow: column wrap;
+    align-items: flex-start;
+  }
+
+  .perfil__submit {
+    display: block;
+    width: auto;
+    margin: 2rem auto;
+    padding: 0.7rem 5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cabeza {
+    min-height: 13vh;
+  }
+
+  .cabecera {
+    border-bottom: none;
+  }
+
+  .nav__alternador-menu {
+    display: none;
+  }
+
+  .nav-contenedor {
+    display: none;
+  }
+
+  .cabecera__tab,
+  .cabecera__tab-btn-registro {
+    margin-bottom: 0;
+  }
+
+  .cabecera__tab,
+  .cabecera__tab-btn-registro,
+  .cabecera__tab-btn-subir {
+    width: auto;
+  }
+
+  .contenido {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .menu-lateral {
+    min-height: 87vh;
+    flex-basis: 10%;
+    padding-top: 2rem;
+    display: block;
+    background-color: #e9e9e9;
+  }
+
+  .perfil {
+    flex-basis: 85%;
+  }
+
+  .perfil__titulo {
+    margin-top: 2rem;
+  }
+
+  /* API Camara */
+
+  .contenedor-camara {
+    width: 100%;
+    height: 28rem;
+  }
+  /* Fin API Camara */
+}

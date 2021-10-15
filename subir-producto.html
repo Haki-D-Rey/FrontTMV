@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subir producto - Tienda SM</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/config.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/subir-producto.css">
+  <script src="js/scripts/general.js"></script>
+  <script src="js/funcionalidadesGenerales.js"></script>
+</head>
+
+<body>
+
+  <!-- Cabecera -->
+
+  <div class="cabeza" id="cabeza">
+    <!-- Backdrop -->
+    <div class="fondo" id="fondo"></div>
+
+    <header class="cabecera">
+      <div class="cabecera__envoltura">
+        <section class="cabecera__izquierda">
+          <!-- Logo -->
+
+          <a href="index.html" class="logo">
+            <h1 class="logo__titulo">Tienda SM</h1>
+          </a>
+
+          <!-- Campo de búsqueda -->
+
+          <form class="cabecera__busqueda" id="busqueda">
+            <img class="cabecera__bus-icono" src="iconos/buscar.svg" alt="Buscar" />
+            <input class="cabecera__buscar" type="text" placeholder="Buscar productos en todas las categorías" />
+          </form>
+        </section>
+        <section class="cabecera__derecha">
+          <a class="cabecera__tab btn" href="mensajes.html">
+            <img src="iconos/mensajes.svg" alt="Mensajes" class="cabecera__tab-icono">
+            <span class="cabecera__tab-texto">Mensajes</span>
+          </a>
+          <a href="subir-producto.html" class="btn btn-primario cabecera__tab-btn-subir">
+            <img src="iconos/subir.svg" alt="Subir" class="cabecera__tab-btn-subir-icono">
+            <span class="cabecera__tab-btn-subir-texto">Subir producto</span>
+          </a>
+          <div class="nav__usuario">
+            <img src="https://placekitten.com/150" alt="Yo" class="avatar" />
+            <span class="nav__usuario-nombre">Eduardo Varela</span>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <!-- Navegación -->
+
+    <div class="nav-contenedor">
+      <button type="button" class="btn btn-primario nav__alternador-menu" id="alternador">
+        <img src="iconos/menu.svg" alt="Menú" class="nav__alternador-menu-icono">
+      </button>
+      <div class="nav" id="nav">
+        <!-- Se muestra en dispositivos menores a 992px de ancho -->
+        <section class="nav__acciones">
+          <div class="nav__usuario">
+            <img src="https://placekitten.com/150" alt="Yo" class="avatar" />
+            <span class="nav__usuario-nombre">Eduardo Varela</span>
+          </div>
+          <h4 class="nav__titulo">Acciones</h4>
+          <a class="cabecera__tab btn" href="mensajes.html">
+            <img src="iconos/mensajes.svg" alt="Mensajes" class="cabecera__tab-icono">
+            <span class="cabecera__tab-texto">Mensajes</span>
+          </a>
+          <a href="subir-producto.html" class="btn btn-primario cabecera__tab-btn-subir">
+            <img src="iconos/subir.svg" alt="Subir" class="cabecera__tab-btn-subir-icono">
+            <span class="cabecera__tab-btn-subir-texto">Subir producto</span>
+          </a>
+        </section>
+
+        <nav class="menu">
+          <h4 class="nav__titulo">Menú</h4>
+          <div class="menu__item">
+            <a href="productos.html" class="btn btn-secundario menu__btn activo">
+              <img src="iconos/productos.svg" alt="Productos" class="menu__icono">
+            </a>
+            <span class="menu__texto">Productos</span>
+          </div>
+          <div class="menu__item">
+            <a href="mensajes.html" class="btn btn-secundario menu__btn">
+              <img src="iconos/mensajes_blanco.svg" alt="Mensajes" class="menu__icono">
+            </a>
+            <span class="menu__texto">Mensajes</span>
+          </div>
+          <div class="menu__item">
+            <a href="favoritos.html" class="btn btn-secundario menu__btn">
+              <img src="iconos/favoritos.svg" alt="Favoritos" class="menu__icono">
+            </a>
+            <span class="menu__texto">Favoritos</span>
+          </div>
+          <div class="menu__item">
+            <a href="#NoHayNadaXD" class="btn btn-secundario menu__btn">
+              <img src="iconos/estadisticas.svg" alt="Estadísticas" class="menu__icono">
+            </a>
+            <span class="menu__texto">Estadísticas</span>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+
+  <main class="contenido">
+    <nav class="menu menu-lateral">
+      <div class="menu__item">
+        <a href="productos.html" class="btn btn-secundario menu__btn activo">
+          <img src="iconos/productos.svg" alt="Productos" class="menu__icono">
+        </a>
+        <span class="menu__texto">Productos</span>
+      </div>
+      <div class="menu__item">
+        <a href="mensajes.html" class="btn btn-secundario menu__btn">
+          <img src="iconos/mensajes_blanco.svg" alt="Mensajes" class="menu__icono">
+        </a>
+        <span class="menu__texto">Mensajes</span>
+      </div>
+      <div class="menu__item">
+        <a href="favoritos.html" class="btn btn-secundario menu__btn">
+          <img src="iconos/favoritos.svg" alt="Favoritos" class="menu__icono">
+        </a>
+        <span class="menu__texto">Favoritos</span>
+      </div>
+      <div class="menu__item">
+        <a href="#NoHayNadaXD" class="btn btn-secundario menu__btn">
+          <img src="iconos/estadisticas.svg" alt="Estadísticas" class="menu__icono">
+        </a>
+        <span class="menu__texto">Estadísticas</span>
+      </div>
+    </nav>
+    <section class="agregar">
+      <h2 class="agregar__titulo">Agrega tus productos</h2>
+      <p class="agregar__info">
+        Aquí podrás agregar productos para la venta |
+        <a href="productos.html" class="agregar__agregar-publico">Ver tus productos</a>
+      </p>
+      <form class="agregar__form" action="#">
+        <div class="carta agregar__datos">
+          <h4 class="agregar__titulo-carta">Información de tu producto</h4>
+          <div class="form-grupo">
+            <label class="label">¿Qué estás vendiendo?</label>
+            <input type='text' class='input-text' />
+          </div>
+          <div class="agregar__form-fila">
+            <div class="form-grupo">
+              <label class="label">Categoría</label>
+              <select class='select'>
+                <option value="">Seleccionar</option>
+              </select>
+            </div>
+            <div class="form-grupo">
+              <label class="label">Categoría secundaria</label>
+              <select class='select'>
+                <option value="">Seleccionar</option>
+              </select>
+            </div>
+          </div>
+          <div class="agregar__form-fila">
+            <div class="form-grupo agregar__fila-2">
+              <label class="label">Precio</label>
+              <input type='text' class='input-text' />
+            </div>
+            <div class="form-grupo agregar__fila-2">
+              <label class="label">Moneda</label>
+              <select class='select'>
+                <option value="">Seleccionar</option>
+              </select>
+            </div>
+            <div class="form-grupo agregar__fila-2">
+              <label class="label">Estado de producto</label>
+              <select class='select'>
+                <option value="">Seleccionar</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-grupo">
+            <label class="label">Descripción</label>
+            <textarea class="textarea"></textarea>
+          </div>
+        </div>
+        <div class="carta">
+          <h4 class="agregar__titulo-carta">Fotos</h4>
+          <div class="agregar__fotos">
+            <div class="agregar__foto">
+              <img src="https://placekitten.com/64" alt="Foto" class="agregar__img" />
+            </div>
+            <div class="agregar__foto">
+              <img src="https://placekitten.com/64" alt="Foto" class="agregar__img" />
+            </div>
+            <div class="agregar__foto">
+              <img src="https://placekitten.com/64" alt="Foto" class="agregar__img" />
+            </div>
+            <div class="agregar__foto">
+              <img src="https://placekitten.com/64" alt="Foto" class="agregar__img" />
+            </div>
+            <div class="agregar__foto">
+              <img src="iconos/agregar.svg" alt="agregar" class="agregar__img" />
+            </div>
+          </div>
+        </div>
+        <div class="carta agregar__datos">
+          <h4 class="agregar__titulo-carta">Información de tu producto</h4>
+          <textarea class="textarea"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primario agregar__submit">
+          <img src="iconos/subir.svg" alt="" class="agregar__submit-icono" />
+          <span class="agregar__submit-texto">Subir producto</span>
+        </button>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

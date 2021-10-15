@@ -1,0 +1,203 @@
+body {
+  background-color: #f2f2f2;
+}
+
+/* Cabecera */
+
+.cabeza {
+  background-color: #fff;
+}
+
+.nav {
+  background-color: #e9e9e9;
+}
+
+.menu-lateral {
+  display: none;
+}
+
+.cabecera__tab,
+.cabecera__tab-btn-registro {
+  margin-bottom: 0.5rem;
+}
+
+.cabecera__tab,
+.cabecera__tab-btn-registro,
+.cabecera__tab-btn-subir {
+  width: 100%;
+}
+
+.cabecera__tab-btn-subir {
+  margin-right: 1rem;
+}
+
+.nav__usuario {
+  display: flex;
+  align-items: center;
+}
+
+.nav__usuario-nombre {
+  color: #333;
+  margin-left: 1rem;
+  font-weight: bold;
+  color: #36bb9c;
+  cursor: default;
+}
+
+.agregar {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.agregar__titulo {
+  font-size: 2rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.agregar__info {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+.agregar__agregar-publico {
+  text-decoration: none;
+  color: #36bb9c;
+}
+
+.agregar__agregar-publico:hover {
+  text-decoration: underline;
+}
+
+.agregar__datos {
+  margin-top: 1rem;
+}
+
+.agregar__titulo-carta {
+  font-size: 1.5rem;
+  color: #36bb9c;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.agregar__form-fila {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.select {
+  width: 100%;
+}
+
+.agregar__fotos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.agregar__foto {
+  margin-right: 1rem;
+  border: 3px dashed #bbc6c2;
+  border-radius: 10px;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agregar__img {
+  width: 100%;
+  min-width: 64px;
+  max-width: 64px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.agregar__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.agregar__submit-icono {
+  margin-right: 0.3rem;
+}
+
+@media screen and (min-width: 576px) {
+  .nav__acciones {
+    flex-flow: column wrap;
+    align-items: flex-start;
+  }
+
+  .agregar__form-fila {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-grupo {
+    flex-basis: 48%;
+  }
+
+  .agregar__fila-2 {
+    flex-basis: 31%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cabeza {
+    min-height: 13vh;
+  }
+
+  .cabecera {
+    border-bottom: none;
+  }
+
+  .nav__alternador-menu {
+    display: none;
+  }
+
+  .nav-contenedor {
+    display: none;
+  }
+
+  .cabecera__tab,
+  .cabecera__tab-btn-registro {
+    margin-bottom: 0;
+  }
+
+  .cabecera__tab,
+  .cabecera__tab-btn-registro,
+  .cabecera__tab-btn-subir {
+    width: auto;
+  }
+
+  .contenido {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .menu-lateral {
+    min-height: 87vh;
+    flex-basis: 10%;
+    padding-top: 2rem;
+    display: block;
+    background-color: #e9e9e9;
+  }
+
+  .agregar {
+    flex-basis: 85%;
+  }
+
+  .agregar__titulo {
+    margin-top: 2rem;
+  }
+
+  .agregar__datos {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,338 @@
+body {
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+}
+
+/* Cabecera */
+
+.cabeza {
+  background-color: #fff;
+}
+
+.nav {
+  background-color: #e9e9e9;
+}
+
+.menu-lateral {
+  display: none;
+}
+
+.cabecera__tab,
+.cabecera__tab-btn-registro {
+  margin-bottom: 0.5rem;
+}
+
+.cabecera__tab,
+.cabecera__tab-btn-registro,
+.cabecera__tab-btn-subir {
+  width: 100%;
+}
+
+.cabecera__tab-btn-subir {
+  margin-right: 1rem;
+}
+
+.nav__usuario {
+  display: flex;
+  align-items: center;
+}
+
+.nav__usuario-nombre {
+  color: #333;
+  margin-left: 1rem;
+  font-weight: bold;
+  color: #36bb9c;
+  cursor: default;
+}
+
+.mensajes {
+  position: relative;
+}
+
+.mensajes__cabecera {
+  padding: 1rem;
+  border-bottom: 2px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+}
+
+.mensajes__perfil {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.mensajes__titulo {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.mensajes__contactos {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.mensajes__contacto {
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2 ease;
+}
+
+.mensajes__contacto:hover,
+.mensajes__contacto:focus {
+  background-color: #d6d6d6;
+}
+
+.mensajes__contacto.activo {
+  background-color: #d6d6d6;
+  font-weight: bold;
+}
+
+.mensajes__contacto-nombre {
+  margin-left: 0.5rem;
+}
+
+.mensajes__mensajeria {
+  padding: 1rem;
+}
+
+.mensajes__chat-mio {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.mensajes__chat-usuario {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.mensajes__chat-mensaje {
+  background-color: #36bb9c;
+  color: #333;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.mensajes__chat-mensaje:last-of-type {
+  margin-bottom: 0;
+}
+
+.mensajes__acciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.mensajes__acciones-input {
+  margin-right: 0.5rem;
+}
+
+.mensajes__detalles-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.carta {
+  width: 95%;
+  margin-bottom: 1rem;
+}
+
+.mensajes__detalles-regresar {
+  margin: 2rem 0 1rem 1rem;
+}
+
+.mensajes__datos {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.mensajes__detalle-contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Transiciones */
+.mensajes__bandeja {
+  width: 100%;
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mensajes__bandeja.mostrar {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mensajes__chat {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform: translate(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mensajes__chat.mostrar {
+  transform: translate(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mensajes__detalles-producto {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.producto__cuerpo {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.producto__img {
+  max-width: 700px;
+}
+
+.mensajes__detalles-producto.mostrar {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width: 576px) {
+  .nav__acciones {
+    flex-flow: column wrap;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mensajes {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cabeza {
+    min-height: 13vh;
+  }
+
+  .cabecera {
+    border-bottom: none;
+  }
+
+  .nav__alternador-menu {
+    display: none;
+  }
+
+  .nav-contenedor {
+    display: none;
+  }
+
+  .cabecera__tab,
+  .cabecera__tab-btn-registro {
+    margin-bottom: 0;
+  }
+
+  .cabecera__tab,
+  .cabecera__tab-btn-registro,
+  .cabecera__tab-btn-subir {
+    width: auto;
+  }
+
+  .contenido {
+    display: flex;
+    position: relative;
+  }
+
+  .menu-lateral {
+    min-height: 87vh;
+    flex-basis: 10%;
+    padding-top: 2rem;
+    display: block;
+    background-color: #e9e9e9;
+  }
+
+  .mensajes {
+    flex-basis: 85%;
+  }
+
+  .regresar {
+    display: none;
+  }
+
+  .mensajes__bandeja {
+    flex-basis: 25%;
+  }
+
+  .mensajes__bandeja {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mensajes__chat {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    min-height: 100%;
+    position: relative;
+    z-index: 1;
+    transform: translate(0%);
+    opacity: 1;
+    visibility: visible;
+    border-left: 2px solid #e5e5e5;
+  }
+
+  .chat__cabecera {
+    padding: 0;
+  }
+
+  .chat__cabecera,
+  .mensajes__mensajeria {
+    flex-basis: 100%;
+  }
+
+  .mensajes__acciones {
+    flex-basis: 100%;
+    align-self: flex-end;
+    padding-bottom: 1rem;
+  }
+
+  .mensajes__detalles-producto {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    position: relative;
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+    border-left: 1px solid #e5e5e5;
+  }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensajes - Tienda SM</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/config.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/mensajes.css">
+  <script src="js/scripts/general.js"></script>
+  <script src="js/mensajes.js"></script>
+</head>
+
+<body>
+
+  <!-- Cabecera -->
+
+  <div class="cabeza" id="cabeza">
+    <!-- Backdrop -->
+    <div class="fondo" id="fondo"></div>
+
+    <header class="cabecera">
+      <div class="cabecera__envoltura">
+        <section class="cabecera__izquierda">
+          <!-- Logo -->
+
+          <a href="index.html" class="logo">
+            <h1 class="logo__titulo">Tienda SM</h1>
+          </a>
+
+          <!-- Campo de búsqueda -->
+
+          <form class="cabecera__busqueda" id="busqueda">
+            <img class="cabecera__bus-icono" src="iconos/buscar.svg" alt="Buscar" />
+            <input class="cabecera__buscar" type="text" placeholder="Buscar productos en todas las categorías" />
+          </form>
+        </section>
+        <section class="cabecera__derecha">
+          <a class="cabecera__tab btn" href="mensajes.html">
+            <img src="iconos/mensajes.svg" alt="Mensajes" class="cabecera__tab-icono">
+            <span class="cabecera__tab-texto">Mensajes</span>
+          </a>
+          <a href="subir-producto.html" class="btn btn-primario cabecera__tab-btn-subir">
+            <img src="iconos/subir.svg" alt="Subir" class="cabecera__tab-btn-subir-icono">
+            <span class="cabecera__tab-btn-subir-texto">Subir producto</span>
+          </a>
+          <div class="nav__usuario">
+            <img src="https://placekitten.com/150" alt="Yo" class="avatar" />
+            <span class="nav__usuario-nombre">Eduardo Varela</span>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <!-- Navegación -->
+
+    <div class="nav-contenedor">
+      <button type="button" class="btn btn-primario nav__alternador-menu" id="alternador">
+        <img src="iconos/menu.svg" alt="Menú" class="nav__alternador-menu-icono">
+      </button>
+      <div class="nav" id="nav">
+        <!-- Se muestra en dispositivos menores a 992px de ancho -->
+        <section class="nav__acciones">
+          <div class="nav__usuario">
+            <img src="https://placekitten.com/150" alt="Yo" class="avatar" />
+            <span class="nav__usuario-nombre">Eduardo Varela</span>
+          </div>
+          <h4 class="nav__titulo">Acciones</h4>
+          <a class="cabecera__tab btn" href="mensajes.html">
+            <img src="iconos/mensajes.svg" alt="Mensajes" class="cabecera__tab-icono">
+            <span class="cabecera__tab-texto">Mensajes</span>
+          </a>
+          <a href="subir-producto.html" class="btn btn-primario cabecera__tab-btn-subir">
+            <img src="iconos/subir.svg" alt="Subir" class="cabecera__tab-btn-subir-icono">
+            <span class="cabecera__tab-btn-subir-texto">Subir producto</span>
+          </a>
+        </section>
+
+        <nav class="menu">
+          <h4 class="nav__titulo">Menú</h4>
+          <div class="menu__item">
+            <a href="productos.html" class="btn btn-secundario menu__btn">
+              <img src="iconos/productos.svg" alt="Productos" class="menu__icono">
+            </a>
+            <span class="menu__texto">Productos</span>
+          </div>
+          <div class="menu__item">
+            <a href="mensajes.html" class="btn btn-secundario menu__btn activo">
+              <img src="iconos/mensajes_blanco.svg" alt="Mensajes" class="menu__icono">
+            </a>
+            <span class="menu__texto">Mensajes</span>
+          </div>
+          <div class="menu__item">
+            <a href="favoritos.html" class="btn btn-secundario menu__btn">
+              <img src="iconos/favoritos.svg" alt="Favoritos" class="menu__icono">
+            </a>
+            <span class="menu__texto">Favoritos</span>
+          </div>
+          <div class="menu__item">
+            <a href="#NoHayNadaXD" class="btn btn-secundario menu__btn">
+              <img src="iconos/estadisticas.svg" alt="Estadísticas" class="menu__icono">
+            </a>
+            <span class="menu__texto">Estadísticas</span>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+
+  <main class="contenido">
+    <nav class="menu menu-lateral">
+      <div class="menu__item">
+        <a href="productos.html" class="btn btn-secundario menu__btn">
+          <img src="iconos/productos.svg" alt="Productos" class="menu__icono">
+        </a>
+        <span class="menu__texto">Productos</span>
+      </div>
+      <div class="menu__item">
+        <a href="mensajes.html" class="btn btn-secundario menu__btn activo">
+          <img src="iconos/mensajes_blanco.svg" alt="Mensajes" class="menu__icono">
+        </a>
+        <span class="menu__texto">Mensajes</span>
+      </div>
+      <div class="menu__item">
+        <a href="favoritos.html" class="btn btn-secundario menu__btn">
+          <img src="iconos/favoritos.svg" alt="Favoritos" class="menu__icono">
+        </a>
+        <span class="menu__texto">Favoritos</span>
+      </div>
+      <div class="menu__item">
+        <a href="#NoHayNadaXD" class="btn btn-secundario menu__btn">
+          <img src="iconos/estadisticas.svg" alt="Estadísticas" class="menu__icono">
+        </a>
+        <span class="menu__texto">Estadísticas</span>
+      </div>
+    </nav>
+    <section class="mensajes">
+      <section class="mensajes__bandeja mostrar" id="bandeja">
+        <div class="mensajes__cabecera">
+          <h3 class="mensajes__titulo">
+            Bandeja de entrada
+          </h3>
+        </div>
+        <div class="mensajes__contactos">
+          <a href="#" class="mensajes__contacto" id="usuario">
+            <img src="https://placekitten.com/150" alt="Imagen de perfíl" class="avatar" />
+            <span class="mensajes__contacto-nombre">Juan Perez</span>
+          </a>
+          <a href="#" class="mensajes__contacto" id="usuario">
+            <img src="https://placekitten.com/150" alt="Imagen de perfíl" class="avatar" />
+            <span class="mensajes__contacto-nombre">Emilio Sanchez</span>
+          </a>
+          <a href="#" class="mensajes__contacto" id="usuario">
+            <img src="https://placekitten.com/150" alt="Imagen de perfíl" class="avatar" />
+            <span class="mensajes__contacto-nombre">Alma Madero</span>
+          </a>
+        </div>
+      </section>
+      <section class="mensajes__chat" id="chat">
+        <div class="mensajes__cabecera chat__cabecera">
+          <a href="#" class="regresar" id="aBandeja">
+            <img src="iconos/retroceder.svg" alt="Regresar" class="mensajes__atras-icono">
+          </a>
+          <div class="mensajes__perfil" id="chatPerfil">
+            <img src="https://placekitten.com/150" alt="Imagen de perfíl" class="avatar" />
+            <span class="mensajes__contacto-nombre">Juan Perez</span>
+          </div>
+        </div>
+        <div class="mensajes__mensajeria">
+          <div class="mensajes__chat-mio">
+            <p class="mensajes__chat-mensaje">Tu mama mata chancho</p>
+          </div>
+          <div class="mensajes__chat-usuario">
+            <p class="mensajes__chat-mensaje">No</p>
+          </div>
+          <div class="mensajes__chat-mio">
+            <p class="mensajes__chat-mensaje">¿Le tenés miedo a la sangre?</p>
+          </div>
+          <div class="mensajes__chat-usuario">
+            <p class="mensajes__chat-mensaje">No</p>
+          </div>
+          <div class="mensajes__chat-mio">
+            <p class="mensajes__chat-mensaje">Lo golpea*</p>
+          </div>
+        </div>
+        <div class="mensajes__acciones">
+          <input type="text" class="input-text mensajes__acciones-input" placeholder="Escribe un mensaje" />
+          <button type="button" class="btn btn-primario btn-circulo mensajes__enviar">
+            <img src="iconos/enviar.svg" alt="Enviar" class="mensajes__enviar-icono">
+          </button>
+        </div>
+      </section>
+      <section class="mensajes__detalles-producto" id="detalles">
+        <div class="mensajes__detalles-regresar">
+          <a href="#" class="regresar" id="aChat">
+            <img src="iconos/retroceder.svg" alt="Regresar" class="mensajes__atras-icono">
+          </a>
+        </div>
+        <div class="mensajes__detalles-info">
+          <div class="carta mensajes__detalle-contenedor">
+            <div class="mensajes__datos">
+              <p class="mensajes__usuario">Juan Perez</p>
+              <div class="mensajes__ubicacion">
+                <img src="iconos/ubicacion.jpg" alt="Ubicación: " class="mensajes__ubicacion-icono">
+                <span class="mensajes__ubicacion-lugar">Altamira</span>
+              </div>
+            </div>
+            <img src="https://placekitten.com/150" alt="Foto de perfíl" class="avatar">
+          </div>
+          <div class="carta">
+            <div class="producto">
+              <div class="producto__cuerpo">
+                <img src="imagenes/PS5.jpg" alt="Imagen del producto" class="producto__img" />
+                <p class="producto__texto">Playstation 5</p>
+                <p class="producto__texto">$ 570</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
